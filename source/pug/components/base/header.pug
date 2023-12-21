@@ -3,36 +3,65 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Бизнес",
-        isActive: true,
+        text: "Главная",
       },
       {
         href: "#",
-        text: "О нас"
+        text: "Услуги"
       },
       {
         href: "#",
-        text: "Цены"
+        text: "Проекты",
+        dropdown: [
+          {
+            href: "#",
+            text: "Примеры проектов"
+          },
+          {
+            href: "#",
+            text: "Заказчики"
+          },
+          {
+            href: "#",
+            text: "Партнеры"
+          }
+        ]
       },
       {
         href: "#",
-        text: "Оформить заказ"
+        text: "О компании",
+        dropdown: [
+          {
+            href: "#",
+            text: "Сертификаты"
+          },
+          {
+            href: "#",
+            text: "Отзывы"
+          },
+          {
+            href: "#",
+            text: "Вакансии"
+          }
+        ]
+      },
+      {
+        href: "#",
+        text: "Контакты"
       }
     ]
 
   header.header(class=headerMods data-header)
     .container
       .header__wrapper
-        if(currentUrl === "index.html")
-          span.header__logo
-            +icon("logo", 247, 35)
-        else
-          a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("logo", 247, 35)
+        a.header__logo(href="/", aria-label="Переход на главную")
+          +img("content", "logo", "webp", "301", "79", "Логотип Device Engineering")
         nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
           ul.main-nav__list
             each item in headerLinks
-              li.main-nav__item
-                a.main-nav__link(class={"is-active": item.isActive} href=item.href)!=item.text
+              li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown})
+                a.main-nav__link(href=item.href)!=item.text
+                if (item.dropdown)
+                  .main-nav__dropdown
 
