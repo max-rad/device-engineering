@@ -996,8 +996,12 @@ button,
   outline: none;
 }
 
-.btn--border {
+.btn--big {
   padding: 15px 20px;
+}
+
+.btn--border {
+  padding: 14px 19px;
   border: 1px solid #00289c;
   background-color: #ffffff;
   color: #00289c;
@@ -1017,6 +1021,14 @@ button,
   -webkit-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease;
+}
+
+.title {
+  margin: 0 0 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 45px;
+  color: #000000;
 }
 
 .intro {
@@ -1278,7 +1290,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding: 90px 20px;
-  width: 320px;
+  width: 100%;
   height: 460px;
   border-radius: 10px;
   -webkit-box-shadow: -4px 4px 12px 0 rgba(0, 0, 0, 0.15);
@@ -1288,6 +1300,8 @@ button,
 .service-card__image {
   z-index: -1;
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .service-card__image::before {
@@ -1388,6 +1402,13 @@ button,
   .intro__image {
     right: unset;
     left: 379px;
+  }
+
+  .service__list {
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
   }
 }
 
@@ -1555,6 +1576,11 @@ button,
   .main-nav__button {
     display: none;
   }
+
+  .service__list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1592,6 +1618,19 @@ button,
   .intro__image img {
     width: 485px;
     height: 265px;
+  }
+
+  .service__wrapper {
+    padding: 50px 0;
+  }
+
+  .service__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    row-gap: 40px;
   }
 }
 
@@ -1644,6 +1683,12 @@ button,
     line-height: 20px;
   }
 
+  .title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
   .intro__title {
     font-size: 40px;
     line-height: 44px;
@@ -1668,6 +1713,42 @@ button,
   .intro__image img {
     width: 600px;
     height: 328px;
+  }
+
+  .service__wrapper {
+    padding: 40px 0;
+  }
+
+  .service__title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .service__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+    row-gap: unset;
+  }
+
+  .service__item {
+    margin-bottom: 30px;
+  }
+
+  .service__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .service__button {
+    max-width: unset;
   }
 }
 

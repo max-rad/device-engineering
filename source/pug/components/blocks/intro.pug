@@ -9,6 +9,6 @@ mixin intro(data)
         if (data.description)
           p.intro__description!=data.description
         if (data.button)
-          +btn({href: data.button.href, text: data.button.text}).intro__button
+          +btn({href: data.button.href, text: data.button.text}).btn--big.intro__button
         .intro__image
           +img("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

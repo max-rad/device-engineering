@@ -21,8 +21,12 @@
 
   outline: none;
 
-  &--border {
+  &--big {
     padding: 15px 20px;
+  }
+
+  &--border {
+    padding: 14px 19px;
 
     border: 1px solid $color-smalt;
     background-color: $color-default-white;

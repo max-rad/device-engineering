@@ -1,0 +1,10 @@
+mixin clients(data)
+  section.clients
+    .container
+      .clients__wrapper
+        h2.title!=data.title
+        ul.clients__list
+          each item in data.list
+            li.clients__item
+              +clients-card(item)
+
