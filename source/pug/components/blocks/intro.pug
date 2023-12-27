@@ -1,21 +1,14 @@
-mixin intro()
+mixin intro(data)
   section.intro
-    .intro__background
-      +picture("content", "intro-background", "png", 1920, 850, "background")
+    if (data.background)
+      .intro__background
+        +img("content/intro", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
     .container
       .intro__wrapper
-        h1.intro__title
-          span Lorem ipsum
-          = " dolor sit ametconsectetur "
-          span adipiscing
-        p.intro__description At&nbsp;vero eos et&nbsp;accusamus et&nbsp;iusto odio dignissimos
-        ul.intro__list
-          li.intro__item
-            span Totam rem aperiam eaque ipsa
-          li.intro__item
-            span Sit voluptatem accusantium doloremque laudantium
-          li.intro__item
-            span Sed ut perspiciatis, unde omnis iste natus error
-        .intro__buttons
-          +btn({text: "заказать", type: "button"}).intro__button
-          +btn({text: "подробнее", type: "button"}).btn--white.intro__button
+        h1.intro__title!=data.title
+        if (data.description)
+          p.intro__description!=data.description
+        if (data.button)
+          +btn({href: data.button.href, text: data.button.text}).intro__button
+        .intro__image
+          +img("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

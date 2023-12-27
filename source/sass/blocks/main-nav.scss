@@ -1,46 +1,102 @@
 .main-nav {
+  width: 100%;
+
+  @include vp-1199 {
+    width: auto;
+  }
+
   &__toggle {
     z-index: 11;
     position: relative;
     display: none;
 
-    width: 30px;
-    height: 30px;
+    width: 54px;
+    height: 54px;
+    padding: 16px 10px;
+
+    border-radius: 6px;
+    background-color: $color-smalt;
 
     cursor: pointer;
     user-select: none;
 
     transition: opacity $trans-default;
 
-    @include vp-767 {
-      display: block;
+    @include vp-1199 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    &::before,
-    &::after {
-      content: "";
+    span {
+      display: block;
       position: absolute;
 
-      left: 0;
+      left: 10px;
 
-      width: 100%;
-      height: 2px;
+      width: calc(100% - 10px * 2);
+      height: 3px;
 
       background-color: $color-default-white;
 
-      transition: transform $trans-default;
-    }
+      transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
 
-    &::before {
-      top: 10px;
-    }
+      &:nth-child(1) {
+        top: 16px;
+      }
 
-    &::after {
-      bottom: 10px;
+      &:nth-child(2) {
+        top: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 16px;
+      }
     }
 
     @include hover-focus {
       opacity: 0.8;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+
+    @include vp-1199 {
+      z-index: 10;
+      position: fixed;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      top: 99px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      padding: 50px 164px 90px 124px;
+
+      background-color: $color-default-white;
+
+      transition: transform $trans-default, visibility $trans-default, opacity $trans-default;
+      transform: translateX(100%);
+    }
+
+    @include vp-767 {
+      top: 74px;
+
+      padding: 40px 66px 120px 35px;
+    }
+
+    @include vp-374 {
+      padding: 40px 20px 120px;
     }
   }
 
@@ -52,72 +108,308 @@
 
     list-style: none;
 
-    @include vp-767 {
-      z-index: 10;
-      position: fixed;
+    @include vp-1199 {
       flex-direction: column;
-      justify-content: flex-start;
-
-      top: 100px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      width: 100%;
-      padding: 200px 20px 20px;
-
-      background-color: rgba($color-black-russian, 0.9);
-
-      transition: transform $trans-default, visibility $trans-default, opacity $trans-default;
-      transform: translateX(100%);
-
-      //visibility: hidden;
-      //opacity: 0;
+      margin-bottom: 50px;
     }
   }
 
   &__item {
+    position: relative;
     margin-right: 60px;
 
-    @include vp-1023 {
+    @include vp-1439 {
       margin-right: 30px;
     }
 
-    @include vp-767 {
+    @include vp-1279 {
+      margin-right: 20px;
+    }
+
+    @include vp-1199 {
       margin-right: 0;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+
+    &.is-active {
+      .main-nav__link {
+        @include vp-1199 {
+          color: $color-smalt;
+        }
+
+        svg {
+          @include vp-1199 {
+            color: $color-smalt;
+
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .main-nav__sublist {
+        @include vp-1199 {
+          display: block;
+        }
+      }
+    }
+
+    &--dropdown {
+      @media (min-width: 1199px) {
+        @include focus-within {
+          .main-nav__link {
+            color: $color-smalt;
+
+            svg {
+              color: $color-smalt;
+
+              transform: rotate(180deg);
+            }
+          }
+
+          .main-nav__sublist {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        @include hover-focus {
+          .main-nav__link {
+            color: $color-smalt;
+
+            svg {
+              color: $color-smalt;
+
+              transform: rotate(180deg);
+            }
+          }
+
+          .main-nav__sublist {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
     }
 
     &:last-child {
       margin-right: 0;
 
-      @include vp-767 {
+      @include vp-1199 {
         margin-bottom: 0;
       }
     }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
 
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 275;
+    font-size: 16px;
     line-height: 16px;
-    text-transform: uppercase;
 
-    color: $color-default-white;
+    color: $color-nero;
 
-    transition: opacity $trans-default;
+    transition: color $trans-default, opacity $trans-default;
     transform: translate3d(0, 0, 0);
 
-    &.is-active {
-      color: $color-summer-sky;
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 24px;
+    }
 
-      pointer-events: none;
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 16x;
+      height: 16px;
+      margin-left: 3px;
+
+      color: $color-nero;
+
+      transition: color $trans-default, transform $trans-default;
+
+      @include vp-1199 {
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 8px;
+      }
     }
 
     @include hover-focus {
       opacity: 0.8;
+    }
+  }
+
+  &__sublist {
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    left: -28px;
+
+    width: 225px;
+    margin: 0;
+    padding: 16px 28px 30px;
+
+    list-style: none;
+
+    border-radius: 0 0 10px 10px;
+    background-color: $trans-default;
+    box-shadow: 0 4px 5px 0 rgba($color-matterhorn, 0.1);
+
+    transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
+
+    opacity: 0;
+    visibility: hidden;
+
+    @include vp-1199 {
+      position: relative;
+      display: none;
+      top: 0;
+      left: 0;
+
+      width: auto;
+      padding: 16px 0 4px;
+
+      border-radius: 0;
+      background-color: $color-transparent;
+      box-shadow: none;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__subitem {
+    margin-bottom: 20px;
+
+    @include vp-1199 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sublink {
+    display: flex;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-default-black;
+
+    transition: opacity $trans-default;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-1199 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 15px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+
+    color: $color-smalt;
+
+    transition: opacity $trans-default;
+
+    @include vp-1199 {
+      order: 1;
+
+      margin-bottom: 0;
+
+      font-weight: 275;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__email {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+
+    color: $color-smalt;
+
+    transition: opacity $trans-default;
+
+    @include vp-1199 {
+      margin-right: 20px;
+
+      font-weight: 275;
+      font-size: 28px;
+      line-height: 28px;
+      text-decoration: underline;
+
+      color: $color-default-black;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 200px;
+
+    @include vp-1199 {
+      display: none;
     }
   }
 }

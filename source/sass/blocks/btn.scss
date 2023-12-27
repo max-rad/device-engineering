@@ -3,16 +3,15 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding: 14px 9px;
+  padding: 13px 20px;
 
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
 
-  border: 1px solid $color-default-white;
-  border-radius: 4px;
-  background-color: $color-summer-sky-2;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-smalt;
   color: $color-default-white;
 
   cursor: pointer;
@@ -22,10 +21,12 @@
 
   outline: none;
 
-  &--white {
-    border: 1px solid $color-dolphin;
+  &--border {
+    padding: 15px 20px;
+
+    border: 1px solid $color-smalt;
     background-color: $color-default-white;
-    color: $color-black-russian-2;
+    color: $color-smalt;
   }
 
   @include hover-focus {

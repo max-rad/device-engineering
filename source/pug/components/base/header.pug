@@ -58,10 +58,23 @@ mixin header(headerMods, currentUrl)
           +img("content", "logo", "webp", "301", "79", "Логотип Device Engineering")
         nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
-          ul.main-nav__list
-            each item in headerLinks
-              li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown})
-                a.main-nav__link(href=item.href)!=item.text
-                if (item.dropdown)
-                  .main-nav__dropdown
+            span
+            span
+            span
+          .main-nav__menu
+            ul.main-nav__list(data-header-accordion)
+              each item in headerLinks
+                li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown} data-header-accordion-item=(!!item.dropdown))
+                  a.main-nav__link(href=item.href data-header-accordion-link=(!!item.dropdown))!=item.text
+                    if (item.dropdown)
+                      +icon("icon-arrow-chevron", 16, 16)
+                  if (item.dropdown)
+                    ul.main-nav__sublist
+                      each subitem in item.dropdown
+                        li.main-nav__subitem
+                          a.main-nav__sublink(href=subitem.href)!=subitem.text
+            .main-nav__contacts
+              a.main-nav__phone(href="tel:+78123093688") +7 (812) 309-36-88
+              a.main-nav__email(href="mailto:info@d-i.su") info@d-i.su
+            +btn({href: "#", text: "Оставить заявку"}).main-nav__button
 

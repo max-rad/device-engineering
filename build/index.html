@@ -20,28 +20,101 @@
     <div class="wrapper">
       <header class="header" data-header>
         <div class="container">
-          <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную"><img src="img/content/logo.webp" srcset="img/content/logo@2x.webp 2x" width="301" height="79" alt="Логотип Device Engineering"></a>
+          <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную"><img src="img/content/logo.webp" width="301" height="79" alt="Логотип Device Engineering"></a>
             <nav class="main-nav">
-              <button class="btn-reset main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-toggle-menu></button>
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги</a>
-                </li>
-                <li class="main-nav__item main-nav__item--dropdown"><a class="main-nav__link" href="#">Проекты</a>
-                  <div class="main-nav__dropdown"></div>
-                </li>
-                <li class="main-nav__item main-nav__item--dropdown"><a class="main-nav__link" href="#">О компании</a>
-                  <div class="main-nav__dropdown"></div>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a>
-                </li>
-              </ul>
+              <button class="btn-reset main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-toggle-menu><span></span><span></span><span></span></button>
+              <div class="main-nav__menu">
+                <ul class="main-nav__list" data-header-accordion>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги</a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--dropdown" data-header-accordion-item><a class="main-nav__link" href="#" data-header-accordion-link>Проекты
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#icon-arrow-chevron"></use>
+                      </svg></a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Примеры проектов</a></li>
+                      <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Заказчики</a></li>
+                      <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Партнеры</a></li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item main-nav__item--dropdown" data-header-accordion-item><a class="main-nav__link" href="#" data-header-accordion-link>О компании
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#icon-arrow-chevron"></use>
+                      </svg></a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Сертификаты</a></li>
+                      <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Отзывы</a></li>
+                      <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Вакансии</a></li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+                <div class="main-nav__contacts"><a class="main-nav__phone" href="tel:+78123093688">+7 (812) 309-36-88</a><a class="main-nav__email" href="mailto:info@d-i.su">info@d-i.su</a></div>
+                <a class="btn main-nav__button" href="#">Оставить заявку
+                </a>
+              </div>
             </nav>
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <section class="intro">
+          <div class="container">
+            <div class="intro__wrapper">
+              <h1 class="intro__title">Device Engineering</h1>
+              <p class="intro__description">Профессиональные услуги в&nbsp;сфере энергетической эффективности и&nbsp;технического консалтинга в&nbsp;области инженерно-технического обеспечения</p>
+              <a class="btn intro__button" href="#">Оставить заявку
+              </a>
+              <div class="intro__image"><img src="img/content/intro/intro-image.webp" width="1060" height="582" alt="image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="service">
+          <div class="service__background"><img src="img/content/service/background.webp" width="1756" height="724" alt="background">
+          </div>
+          <div class="container">
+            <div class="service__wrapper">
+              <h2 class="service__title">Услуги</h2>
+              <ul class="list-reset service__list">
+                <li class="service__item"><a class="service-card" href="#">
+                    <div class="service-card__image"><img src="img/content/service/image-1.webp" width="320" height="460" alt="image">
+                    </div>
+                    <h3 class="service-card__title">Энергетическое обследование</h3>
+                    <button class="btn service-card__button" type="button">Подробнее
+                    </button></a>
+                </li>
+                <li class="service__item"><a class="service-card" href="#">
+                    <div class="service-card__image"><img src="img/content/service/image-2.webp" width="320" height="460" alt="image">
+                    </div>
+                    <h3 class="service-card__title">Разработка программ энергосбережения</h3>
+                    <button class="btn service-card__button" type="button">Подробнее
+                    </button></a>
+                </li>
+                <li class="service__item"><a class="service-card" href="#">
+                    <div class="service-card__image"><img src="img/content/service/image-3.webp" width="320" height="460" alt="image">
+                    </div>
+                    <h3 class="service-card__title">Проведение испытаний тепловых сетей</h3>
+                    <button class="btn service-card__button" type="button">Подробнее
+                    </button></a>
+                </li>
+                <li class="service__item"><a class="service-card" href="#">
+                    <div class="service-card__image"><img src="img/content/service/image-4.webp" width="320" height="460" alt="image">
+                    </div>
+                    <h3 class="service-card__title">Разработка схем тепло-водоснабжения</h3>
+                    <button class="btn service-card__button" type="button">Подробнее
+                    </button></a>
+                </li>
+              </ul>
+              <a class="btn btn--border service__button" href="#">Смотреть все
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div class="container"></div>
       </footer>

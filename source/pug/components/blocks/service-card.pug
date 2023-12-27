@@ -1,0 +1,6 @@
+mixin service-card(data)
+  a.service-card(href=data.href)
+    .service-card__image
+      +img("content/service", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    h3.service-card__title!=data.title
+    +btn({type: "button", text: "Подробнее"}).service-card__button
