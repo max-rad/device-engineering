@@ -1,5 +1,5 @@
 mixin intro(data)
-  section.intro
+  section.intro&attributes(attributes)
     if (data.background)
       .intro__background
         +img("content/intro", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
@@ -10,5 +10,6 @@ mixin intro(data)
           p.intro__description!=data.description
         if (data.button)
           +btn({href: data.button.href, text: data.button.text}).btn--big.intro__button
-        .intro__image
-          +img("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+        if (data.image)
+          .intro__image
+            +img("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

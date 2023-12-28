@@ -1,3 +1,54 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Услуги"
+      },
+      {
+        href: "#",
+        text: "Проекты"
+      },
+      {
+        href: "#",
+        text: "О&nbsp;компании"
+      },
+      {
+        href: "#",
+        text: "Контакты"
+      }
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        a.footer__logo(href="/", aria-label="Переход на главную")
+          +icon("logo", 301, 72)
+        .footer__info
+          p.footer__text ООО &laquo;Дивайс Инжиниринг&raquo;,
+          p.footer__text ИНН 7810517696,
+          p.footer__text ОГРН 1089847215061
+        .footer__additional-info
+          .footer__address
+            p.footer__label Адрес
+            p.footer__description г. Санкт-Петербург, наб. Обводного канала, д.&nbsp;28, стр.&nbsp;1
+          .footer__contacts
+            p.footer__label Контакты
+            p.footer__email Email:
+              =" "
+              a(href="mailto:info@d-i.su") info@d-i.su
+            p.footer__phone Телефон:
+              =" "
+              a(href="tel:+78123093688") +7 (812) 309-36-88
+        .footer__nav
+          p.footer__label Услуги
+          ul.footer__list
+            each item in footerLinks
+              li.footer__item
+                a.footer__link(href=item.href)!=item.text
+        a.footer__policy(href="#") Политика персональных данных
+

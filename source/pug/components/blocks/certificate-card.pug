@@ -1,0 +1,4 @@
+mixin certificate-card(data)
+  a.certificate-card(href="#")
+    .certificate-card__image
+      +img("content/certificates", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

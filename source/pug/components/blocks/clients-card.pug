@@ -1,5 +1,0 @@
-mixin clients-card(data)
-  a.clients-card(href=data.href)
-    .clients-card__image
-      +img(data.image.path, data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
-    h3.clients-card__title!=data.title

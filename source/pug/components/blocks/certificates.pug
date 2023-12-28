@@ -1,0 +1,51 @@
+mixin certificates()
+  -
+    const list = [
+      {
+        image: {
+          src: "certificate-1",
+          format: "webp",
+          width: "280",
+          height: "400",
+          alt: "certificate"
+        }
+      },
+      {
+        image: {
+          src: "certificate-2",
+          format: "webp",
+          width: "280",
+          height: "400",
+          alt: "certificate"
+        }
+      },
+      {
+        image: {
+          src: "certificate-3",
+          format: "webp",
+          width: "280",
+          height: "400",
+          alt: "certificate"
+        }
+      },
+      {
+        image: {
+          src: "certificate-4",
+          format: "webp",
+          width: "280",
+          height: "400",
+          alt: "certificate"
+        }
+      }
+    ]
+
+  section.certificates
+    .container
+      .certificates__wrapper
+        h2.title.title--h2 Свидетельства и&nbsp;сертификаты
+        .certificates__slider.swiper(data-slider="certificates")
+          .certificates__slides.swiper-wrapper
+            each item in list
+              .certificates__slide.swiper-slide
+                +certificate-card(item)
+        +btn({href: "#", text: "Смотреть все"}).btn--border.certificates__button

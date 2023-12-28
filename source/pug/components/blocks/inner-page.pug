@@ -1,0 +1,16 @@
+mixin inner-page(data)
+  section.inner-page
+    .container
+      h1.title.title--h1!=data.title
+      p.inner-page__description!=data.description
+      ul.list-reset.inner-page__list
+        each item in data.list
+          li.inner-page__item
+            if (currentUrl === "partners.html")
+              +client-card(item)
+            if (currentUrl === "clients.html")
+              +client-card(item)
+            if (currentUrl === "service.html")
+              +service-card(item)
+      if block
+        block

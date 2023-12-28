@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>global</title>
+    <title>Device Engineering</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,9 +18,12 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header" data-header>
+      <header class="header" data-header data-media="(max-width: 1199px)">
         <div class="container">
-          <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную"><img src="img/content/logo.webp" width="301" height="79" alt="Логотип Device Engineering"></a>
+          <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную">
+              <svg width="301" height="79" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#logo"></use>
+              </svg></a>
             <nav class="main-nav">
               <button class="btn-reset main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-toggle-menu><span></span><span></span><span></span></button>
               <div class="main-nav__menu">
@@ -78,34 +81,34 @@
           </div>
           <div class="container">
             <div class="service__wrapper">
-              <h2 class="title">Услуги</h2>
+              <h2 class="title title--h2">Услуги</h2>
               <ul class="list-reset service__list">
                 <li class="service__item"><a class="service-card" href="#">
                     <div class="service-card__image"><img src="img/content/service/image-1.webp" width="320" height="460" alt="image">
                     </div>
                     <h3 class="service-card__title">Энергетическое обследование</h3>
-                    <button class="btn service-card__button" type="button">Подробнее
+                    <button class="btn btn--small service-card__button" type="button">Подробнее
                     </button></a>
                 </li>
                 <li class="service__item"><a class="service-card" href="#">
                     <div class="service-card__image"><img src="img/content/service/image-2.webp" width="320" height="460" alt="image">
                     </div>
                     <h3 class="service-card__title">Разработка программ энергосбережения</h3>
-                    <button class="btn service-card__button" type="button">Подробнее
+                    <button class="btn btn--small service-card__button" type="button">Подробнее
                     </button></a>
                 </li>
                 <li class="service__item"><a class="service-card" href="#">
                     <div class="service-card__image"><img src="img/content/service/image-3.webp" width="320" height="460" alt="image">
                     </div>
                     <h3 class="service-card__title">Проведение испытаний тепловых сетей</h3>
-                    <button class="btn service-card__button" type="button">Подробнее
+                    <button class="btn btn--small service-card__button" type="button">Подробнее
                     </button></a>
                 </li>
                 <li class="service__item"><a class="service-card" href="#">
                     <div class="service-card__image"><img src="img/content/service/image-4.webp" width="320" height="460" alt="image">
                     </div>
                     <h3 class="service-card__title">Разработка схем тепло-водоснабжения</h3>
-                    <button class="btn service-card__button" type="button">Подробнее
+                    <button class="btn btn--small service-card__button" type="button">Подробнее
                     </button></a>
                 </li>
               </ul>
@@ -117,35 +120,166 @@
         <section class="clients">
           <div class="container">
             <div class="clients__wrapper">
-              <h2 class="title">Заказчики</h2>
-              <ul class="clients__list">
-                <li class="clients__item"><a class="clients-card">
-                    <div class="clients-card__image"><img src="img/content/clients/logo-1.webp" width="240" height="150" alt="logo">
+              <h2 class="title title--h2">Заказчики</h2>
+              <ul class="list-reset clients__list">
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/clients/logo-1.webp" width="240" height="150" alt="logo">
                     </div>
-                    <h3 class="clients-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
+                    <h3 class="client-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
                 </li>
-                <li class="clients__item"><a class="clients-card">
-                    <div class="clients-card__image"><img src="img/content/clients/logo-2.webp" width="240" height="150" alt="logo">
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/clients/logo-2.webp" width="240" height="150" alt="logo">
                     </div>
-                    <h3 class="clients-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
+                    <h3 class="client-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
                 </li>
-                <li class="clients__item"><a class="clients-card">
-                    <div class="clients-card__image"><img src="img/content/clients/logo-3.webp" width="240" height="150" alt="logo">
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/clients/logo-3.webp" width="240" height="150" alt="logo">
                     </div>
-                    <h3 class="clients-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
+                    <h3 class="client-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
                 </li>
-                <li class="clients__item"><a class="clients-card">
-                    <div class="clients-card__image"><img src="img/content/clients/logo-4.webp" width="240" height="150" alt="logo">
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/clients/logo-4.webp" width="240" height="150" alt="logo">
                     </div>
-                    <h3 class="clients-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
+                    <h3 class="client-card__title">ГУП РК&nbsp;&laquo;КарелКоммунЭнерго&raquo;</h3></a>
                 </li>
               </ul>
+              <a class="btn btn--border clients__button" href="#">Смотреть все
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="certificates">
+          <div class="container">
+            <div class="certificates__wrapper">
+              <h2 class="title title--h2">Свидетельства и&nbsp;сертификаты</h2>
+              <div class="certificates__slider swiper" data-slider="certificates">
+                <div class="certificates__slides swiper-wrapper">
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                      <div class="certificate-card__image"><img src="img/content/certificates/certificate-1.webp" width="280" height="400" alt="certificate">
+                      </div></a>
+                  </div>
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                      <div class="certificate-card__image"><img src="img/content/certificates/certificate-2.webp" width="280" height="400" alt="certificate">
+                      </div></a>
+                  </div>
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                      <div class="certificate-card__image"><img src="img/content/certificates/certificate-3.webp" width="280" height="400" alt="certificate">
+                      </div></a>
+                  </div>
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                      <div class="certificate-card__image"><img src="img/content/certificates/certificate-4.webp" width="280" height="400" alt="certificate">
+                      </div></a>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn--border certificates__button" href="#">Смотреть все
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="clients">
+          <div class="container">
+            <div class="clients__wrapper">
+              <h2 class="title title--h2">Наши партнеры</h2>
+              <ul class="list-reset clients__list">
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/partners/logo-1.webp" width="240" height="150" alt="logo">
+                    </div>
+                    <h3 class="client-card__title">Санкт-Петербургский политехнический университет Петра Великого</h3></a>
+                </li>
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/partners/logo-2.webp" width="240" height="150" alt="logo">
+                    </div>
+                    <h3 class="client-card__title">ФБУ &laquo;НТЦ Энергобезопасность&raquo;</h3></a>
+                </li>
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/partners/logo-3.webp" width="240" height="150" alt="logo">
+                    </div>
+                    <h3 class="client-card__title">ФБУ &laquo;НТЦ Энергобезопасность&raquo;</h3></a>
+                </li>
+                <li class="clients__item"><a class="client-card">
+                    <div class="client-card__image"><img src="img/content/partners/logo-4.webp" width="240" height="150" alt="logo">
+                    </div>
+                    <h3 class="client-card__title">ООО &laquo;ЛЕД-Эффект&raquo;</h3></a>
+                </li>
+              </ul>
+              <a class="btn btn--border clients__button" href="#">Смотреть все
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="feedback">
+          <div class="container">
+            <div class="feedback__wrapper">
+              <div class="feedback__content">
+                <div class="feedback__background"><img src="img/content/feedback/background.webp" width="1400" height="706" alt="background">
+                  <div class="feedback__image"><img src="img/content/feedback/girl.webp" width="1400" height="706" alt="girl">
+                  </div>
+                </div>
+                <h2 class="feedback__title">Хотите узнать больше о&nbsp;наших услугах?</h2>
+                <div class="feedback__form" data-validate-form>
+                  <form method="get">
+                    <div class="custom-input feedback__input">
+                      <label>
+                        <input type="text" name="name" placeholder="Ваше имя">
+                      </label>
+                    </div>
+                    <div class="custom-input feedback__input" data-validate-type="phone">
+                      <label>
+                        <input type="tel" name="name" placeholder="Ваш номер телефона">
+                      </label>
+                    </div>
+                    <div class="custom-textarea feedback__textarea">
+                      <label>
+                        <textarea name="name" placeholder="Ваш вопрос"></textarea>
+                      </label>
+                    </div>
+                    <button class="btn feedback__button" type="submit">Ваш вопрос
+                    </button>
+                    <p class="feedback__agreement">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
       <footer class="footer">
-        <div class="container"></div>
+        <div class="container">
+          <div class="footer__wrapper"><a class="footer__logo" href="/" aria-label="Переход на главную">
+              <svg width="301" height="72" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#logo"></use>
+              </svg></a>
+            <div class="footer__info">
+              <p class="footer__text">ООО &laquo;Дивайс Инжиниринг&raquo;,</p>
+              <p class="footer__text">ИНН 7810517696,</p>
+              <p class="footer__text">ОГРН 1089847215061</p>
+            </div>
+            <div class="footer__additional-info">
+              <div class="footer__address">
+                <p class="footer__label">Адрес</p>
+                <p class="footer__description">г. Санкт-Петербург, наб. Обводного канала, д.&nbsp;28, стр.&nbsp;1</p>
+              </div>
+              <div class="footer__contacts">
+                <p class="footer__label">Контакты</p>
+                <p class="footer__email">Email: <a href="mailto:info@d-i.su">info@d-i.su</a>
+                </p>
+                <p class="footer__phone">Телефон: <a href="tel:+78123093688">+7 (812) 309-36-88</a>
+                </p>
+              </div>
+            </div>
+            <div class="footer__nav">
+              <p class="footer__label">Услуги</p>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Главная</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Услуги</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Проекты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">О&nbsp;компании</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              </ul>
+            </div><a class="footer__policy" href="#">Политика персональных данных</a>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

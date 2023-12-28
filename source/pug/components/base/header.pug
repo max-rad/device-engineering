@@ -51,11 +51,11 @@ mixin header(headerMods, currentUrl)
       }
     ]
 
-  header.header(class=headerMods data-header)
+  header.header(class=headerMods data-header data-media="(max-width: 1199px)")
     .container
       .header__wrapper
         a.header__logo(href="/", aria-label="Переход на главную")
-          +img("content", "logo", "webp", "301", "79", "Логотип Device Engineering")
+          +icon("logo", 301, 79)
         nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
             span

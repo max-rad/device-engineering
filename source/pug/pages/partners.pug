@@ -1,0 +1,88 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Device Engineering | Партнеры"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "partners.html"
+
+block main
+    main
+      +inner-page({
+        title: "Наши партнеры",
+        description: "Компания ООО &laquo;Дивайс Инжиниринг&raquo; активно работает над развитием своей партнерской сети. Мы&nbsp;работаем с&nbsp;лучшими партнерами на&nbsp;российском рынке",
+        list: [
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-1",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "Санкт-Петербургский политехнический университет Петра Великого"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-2",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ФБУ &laquo;НТЦ Энергобезопасность&raquo;"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-3",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ФБУ &laquo;НТЦ Энергобезопасность&raquo;"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-4",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ООО &laquo;ЛЕД-Эффект&raquo;"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-5",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "&laquo;Петербургский энергетический институт повышения квалификации&raquo;"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-6",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ООО &laquo;ЭнергоМаркет&raquo;"
+          }
+        ]
+      })
+      +feedback()
+
+block modals

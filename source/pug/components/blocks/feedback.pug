@@ -1,0 +1,30 @@
+mixin feedback()
+  section.feedback
+    .container
+      .feedback__wrapper
+        .feedback__content
+          .feedback__background
+            +img("content/feedback", "background", "webp", "1400", "706", "background")
+            .feedback__image
+              +img("content/feedback", "girl", "webp", "1400", "706", "girl")
+          h2.feedback__title Хотите узнать больше о&nbsp;наших услугах?
+          .feedback__form(data-validate-form)
+            form(method="get")
+              +custom-input({
+                type: "text",
+                name: "name",
+                placeholder: "Ваше имя"
+              }).feedback__input
+              +custom-input({
+                type: "tel",
+                name: "name",
+                placeholder: "Ваш номер телефона"
+              }).feedback__input(data-validate-type="phone")
+              +custom-textarea({
+                name: "name",
+                placeholder: "Ваш вопрос"
+              }).feedback__textarea
+              +btn({type: "submit", text: "Ваш вопрос"}).feedback__button
+              p.feedback__agreement Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+                a(href="#") политикой обработки персональных данных
+

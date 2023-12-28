@@ -11,6 +11,22 @@
   border-radius: 10px;
   box-shadow: -4px 4px 12px 0 rgba($color-default-black, 0.15);
 
+  transition: color $trans-default, transform $trans-default;
+
+  @include hover-focus {
+    transform: translateY(-20px);
+
+    .service-card__button {
+      background-color: $color-persian-blue;
+    }
+  }
+
+  @include active {
+    .service-card__button {
+      background-color: $color-sapphire;
+    }
+  }
+
   &__image {
     z-index: -1;
     position: absolute;

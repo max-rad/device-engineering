@@ -2,6 +2,9 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper/navigation";
+@import "vendor/swiper/pagination";
+@import "vendor/swiper/swiper";
 
 // Global
 // ---------------------------------
@@ -23,7 +26,16 @@
 @import "blocks/data-accordion";
 @import "blocks/title";
 @import "blocks/intro";
+@import "blocks/custom-checkbox";
+@import "blocks/custom-input";
+@import "blocks/custom-radio";
 @import "blocks/custom-select";
+@import "blocks/custom-textarea";
 @import "blocks/service";
 @import "blocks/service-card";
 @import "blocks/clients";
+@import "blocks/client-card";
+@import "blocks/certificates";
+@import "blocks/certificate-card";
+@import "blocks/feedback";
+@import "blocks/inner-page";

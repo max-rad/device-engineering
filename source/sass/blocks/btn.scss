@@ -17,12 +17,24 @@
   cursor: pointer;
   user-select: none;
 
-  transition: opacity $trans-default;
+  transition: background-color $trans-default;
 
   outline: none;
 
+  &--small {
+    padding: 10px 20px;
+  }
+
   &--big {
     padding: 15px 20px;
+  }
+
+  @include hover-focus {
+    background-color: $color-persian-blue;
+  }
+
+  @include active {
+    background-color: $color-sapphire;
   }
 
   &--border {
@@ -31,9 +43,19 @@
     border: 1px solid $color-smalt;
     background-color: $color-default-white;
     color: $color-smalt;
-  }
 
-  @include hover-focus {
-    opacity: 0.8;
+    transition: border $trans-default, color $trans-default;
+
+    @include hover-focus {
+      border: 1px solid $color-persian-blue;
+      background-color: $color-default-white;
+      color: $color-persian-blue;
+    }
+
+    @include active {
+      border: 1px solid $color-sapphire;
+      background-color: $color-default-white;
+      color: $color-sapphire;
+    }
   }
 }

@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-    - const title = "global"
+    - const title = "Device Engineering"
     - const wrapperMods = ""
     - const hasHeader = true
     - const headerMods = ""
@@ -76,5 +76,56 @@ block main
           }
         ]
       })
+      +certificates()
+      +clients({
+        title: "Наши партнеры",
+        list: [
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-1",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "Санкт-Петербургский политехнический университет Петра Великого"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-2",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ФБУ &laquo;НТЦ Энергобезопасность&raquo;"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-3",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ФБУ &laquo;НТЦ Энергобезопасность&raquo;"
+          },
+          {
+            image: {
+              path: "content/partners",
+              src: "logo-4",
+              format: "webp",
+              width: "240",
+              height: "150",
+              alt: "logo"
+            },
+            title: "ООО &laquo;ЛЕД-Эффект&raquo;"
+          }
+        ]
+      })
+      +feedback()
 
 block modals

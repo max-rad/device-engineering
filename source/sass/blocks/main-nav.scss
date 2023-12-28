@@ -214,7 +214,7 @@
 
     color: $color-nero;
 
-    transition: color $trans-default, opacity $trans-default;
+    transition: color $trans-default;
     transform: translate3d(0, 0, 0);
 
     @include vp-1199 {
@@ -246,7 +246,19 @@
     }
 
     @include hover-focus {
-      opacity: 0.8;
+      color: $color-persian-blue;
+
+      svg {
+        color: $color-persian-blue;
+      }
+    }
+
+    @include active {
+      color: $color-sapphire;
+
+      svg {
+        color: $color-persian-blue;
+      }
     }
   }
 
@@ -263,7 +275,7 @@
     list-style: none;
 
     border-radius: 0 0 10px 10px;
-    background-color: $trans-default;
+    background-color: $color-default-white;
     box-shadow: 0 4px 5px 0 rgba($color-matterhorn, 0.1);
 
     transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
@@ -314,7 +326,7 @@
 
     color: $color-default-black;
 
-    transition: opacity $trans-default;
+    transition: color $trans-default;
 
     @include vp-1199 {
       font-size: 20px;
@@ -327,7 +339,11 @@
     }
 
     @include hover-focus {
-      opacity: 0.8;
+      color: $color-persian-blue
+    }
+
+    @include active {
+      color: $color-sapphire;
     }
   }
 
@@ -352,7 +368,7 @@
 
     color: $color-smalt;
 
-    transition: opacity $trans-default;
+    transition: color $trans-default;
 
     @include vp-1199 {
       order: 1;
@@ -370,7 +386,11 @@
     }
 
     @include hover-focus {
-      opacity: 0.8;
+      color: $color-persian-blue
+    }
+
+    @include active {
+      color: $color-sapphire;
     }
   }
 
@@ -381,7 +401,7 @@
 
     color: $color-smalt;
 
-    transition: opacity $trans-default;
+    transition: color $trans-default;
 
     @include vp-1199 {
       margin-right: 20px;
@@ -400,7 +420,11 @@
     }
 
     @include hover-focus {
-      opacity: 0.8;
+      color: $color-persian-blue
+    }
+
+    @include active {
+      color: $color-sapphire;
     }
   }
 
