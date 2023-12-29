@@ -1,0 +1,56 @@
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: zoom-in;
+
+  @include vp-767 {
+    flex-direction: row;
+  }
+
+  &__image {
+    flex-shrink: 0;
+
+    width: 200px;
+    height: 280px;
+    margin: 0 0 20px;
+
+    @include vp-767 {
+      width: 86px;
+      height: 120px;
+      margin: 0 12px 0 0;
+    }
+
+    img {
+      width: 200px;
+      height: 280px;
+
+      object-fit: contain;
+
+      @include vp-767 {
+        width: 86px;
+        height: 120px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 320px;
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+
+    color: $color-default-black;
+
+    @include vp-767 {
+      max-width: 222px;
+
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+}

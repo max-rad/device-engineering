@@ -1,0 +1,76 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Device Engineering | Свидетельства и сертификаты"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "certificates.html"
+
+block main
+    main
+      +inner-page({
+        title: "Свидетельства и&nbsp;сертификаты",
+        description: "Согласно Федеральному закону от&nbsp;23&nbsp;ноября 2009&nbsp;г. N&nbsp;261-ФЗ&quot;Об энергосбережении и&nbsp;о&nbsp;повышении энергетической эффективности...&quot; деятельность по&nbsp;проведению энергетического обследования вправе осуществлять только лица, являющиеся членами саморегулируемых организаций в&nbsp;области энергетического обследования, что подтверждается соответствующим свидетельством.",
+        list: [
+          {
+            image: {
+              src: "certificate-1",
+              format: "webp",
+              width: "280",
+              height: "400",
+              alt: "certificate"
+            }
+          },
+          {
+            image: {
+              src: "certificate-1",
+              format: "webp",
+              width: "280",
+              height: "400",
+              alt: "certificate"
+            }
+          },
+          {
+            image: {
+              src: "certificate-1",
+              format: "webp",
+              width: "280",
+              height: "400",
+              alt: "certificate"
+            }
+          },
+          {
+            image: {
+              src: "certificate-2",
+              format: "webp",
+              width: "280",
+              height: "400",
+              alt: "certificate"
+            }
+          },
+          {
+            image: {
+              src: "certificate-3",
+              format: "webp",
+              width: "280",
+              height: "400",
+              alt: "certificate"
+            }
+          },
+          {
+            image: {
+              src: "certificate-4",
+              format: "webp",
+              width: "280",
+              height: "400",
+              alt: "certificate"
+            }
+          }
+        ]
+      })
+      +feedback()
+
+block modals

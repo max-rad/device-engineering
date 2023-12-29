@@ -2,7 +2,10 @@ mixin intro(data)
   section.intro&attributes(attributes)
     if (data.background)
       .intro__background
-        +img("content/intro", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
+        picture
+          source(media="(max-width: 767px)" srcset="img/content/intro/" + data.background.src + "-mobile" + "." + data.background.format)
+          source(media="(max-width: 1023px)" srcset="img/content/intro/" + data.background.src + "-tablet" + "." + data.background.format)
+          img(src="img/content/intro/" + data.background.src + "." + data.background.format width=data.background.width height=data.background.height alt=data.background.alt)
     .container
       .intro__wrapper
         h1.intro__title!=data.title

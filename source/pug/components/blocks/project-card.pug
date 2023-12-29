@@ -1,0 +1,7 @@
+mixin project-card(data)
+  a.project-card(href="#")
+    .project-card__info
+      h3.project-card__title!=data.title
+      +btn({type: "button", text: "Подробнее"}).project-card__button
+    .project-card__image
+      +img("content/projects", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

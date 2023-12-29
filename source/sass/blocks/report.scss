@@ -1,0 +1,34 @@
+.report {
+  &__wrapper {
+    padding: 60px 0;
+
+    @include vp-1023 {
+      padding: 50px 0;
+    }
+
+    @include vp-767 {
+      padding: 40px 0;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+
+    color: $color-default-black;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    p {
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

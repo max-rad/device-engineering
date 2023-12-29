@@ -1,0 +1,43 @@
+mixin equipment()
+  -
+    const list = [
+      {
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "300",
+          alt: "image"
+        }
+      },
+      {
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "300",
+          alt: "image"
+        }
+      },
+      {
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "300",
+          alt: "image"
+        }
+      }
+    ]
+
+  section.equipment
+    .container
+      .equipment__wrapper
+        h2.title.title--h2 Какие приборы мы&nbsp;используем
+        p.equipment__description Одним из&nbsp;главных этапов в&nbsp;организации деятельности энергоаудита является правильный и&nbsp;эффективный подбор оборудования для проведения энегетического обследования
+        .equipment__slider.swiper(data-slider="equipment")
+          .equipment__slides.swiper-wrapper
+            each item in list
+              .equipment__slide.swiper-slide
+                .equipment__image
+                  +img("content", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)

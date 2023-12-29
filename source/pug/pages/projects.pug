@@ -1,0 +1,53 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Device Engineering | Примеры проектов"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "projects.html"
+
+block main
+    main
+      +inner-page({
+        title: "Примеры проектов",
+        description: "Одним из&nbsp;главных принципов компании ООО &quot;Дивайс Инжиниринг &quot;является комплексный подход, в&nbsp;вопросе снижения энергопотребления, от&nbsp;аналитики до&nbsp;реализации, в&nbsp;том числе применяя схемы оплаты услуг за&nbsp;счёт достигнутой экономии без привлечения средств заказчика.",
+        listMods: "inner-page__list--single",
+        list: [
+          {
+            title: "Обязательное энергетическое обследование объектов одной из&nbsp;крупнейших распределительных электросетевых компаний России ПАО &laquo;Московская объединённая электросетевая компания&raquo;",
+            image: {
+              src: "image-1",
+              format: "webp",
+              width: "637",
+              height: "313",
+              alt: "image"
+            }
+          },
+          {
+            title: "Энергетическое обследование Газпром нефть шельф МЛСП &laquo;Приразломная&raquo; с&nbsp;разработкой математической модели энергосистемы",
+            image: {
+              src: "image-2",
+              format: "webp",
+              width: "637",
+              height: "313",
+              alt: "image"
+            }
+          },
+          {
+            title: "Разработка раздела энергоэффективность и&nbsp;энергетических паспортов с&nbsp;расчётом температурных полей для объектов нефтеперерабатывающих комплексов Роснефть",
+            image: {
+              src: "image-3",
+              format: "webp",
+              width: "637",
+              height: "313",
+              alt: "image"
+            }
+          }
+        ]
+      })
+      +feedback()
+
+block modals

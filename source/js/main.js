@@ -5,6 +5,7 @@ import {initHeaderAccordion} from './modules/header-accordion/init-header-accord
 import {initCertificatesSlider} from './modules/sliders/init-certificates-slider';
 import {initPhoneMask} from './modules/phone-mask';
 import {initPhoneValidation} from './modules/init-phone-validation';
+import {initEquipmentSlider} from './modules/sliders/init-equipment-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCustomSelect();
     initAccordion();
     initCertificatesSlider();
+    initEquipmentSlider();
     initPhoneMask();
     initPhoneValidation();
   });

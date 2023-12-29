@@ -2775,6 +2775,7 @@ button,
   height: 100%;
   max-height: 437px;
   padding: 37px 0 0 40px;
+  border-radius: 10px;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -2912,8 +2913,356 @@ button,
   row-gap: 40px;
 }
 
+.inner-page__list--single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-column-gap: unset;
+  -moz-column-gap: unset;
+  column-gap: unset;
+  row-gap: unset;
+}
+
+.inner-page__list--single .inner-page__item {
+  margin: 0 0 40px;
+}
+
+.inner-page__list--single .inner-page__item:last-child {
+  margin: 0;
+}
+
 .inner-page__item {
   width: 100%;
+}
+
+.inner-page__button {
+  width: 100%;
+  max-width: 320px;
+  margin: 60px 0 0;
+}
+
+.description__wrapper {
+  padding: 60px 0;
+}
+
+.description__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.description__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.description__content p {
+  margin: 0 0 20px;
+}
+
+.description__video {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.description__video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.description__video video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.description__preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.description__preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.description__play-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.description__play-button svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.description__play-button.focus-visible:focus svg {
+  color: #0036d1;
+}
+
+.equipment__wrapper {
+  padding: 60px 0;
+}
+
+.equipment__description {
+  max-width: 730px;
+  margin: 0 0 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.equipment__slider {
+  width: 100%;
+}
+
+.equipment__slides {
+  width: 100%;
+}
+
+.equipment__slide {
+  width: 320px;
+  height: 300px;
+  margin-right: 40px;
+}
+
+.equipment__slide:last-child {
+  margin-right: 0;
+}
+
+.equipment__image {
+  width: 320px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.equipment__image img {
+  width: 320px;
+  height: 300px;
+  border-radius: 8px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.passport__wrapper {
+  padding: 60px 0;
+}
+
+.passport__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 366px;
+  grid-template-columns: 1fr 366px;
+  -webkit-column-gap: 176px;
+  -moz-column-gap: 176px;
+  column-gap: 176px;
+}
+
+.passport__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.passport__content p {
+  margin: 0;
+}
+
+.passport__content ul {
+  padding-left: 25px;
+}
+
+.passport__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.passport__image {
+  position: relative;
+  width: 366px;
+  height: 502px;
+}
+
+.passport__image::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 46px);
+  height: calc(100% - 52px);
+  border-radius: 10px;
+  background-color: rgba(19, 80, 254, 0.2);
+}
+
+.passport__image img {
+  width: 366px;
+  height: 502px;
+  padding: 52px 0 0 46px;
+  border-radius: 10px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.report__wrapper {
+  padding: 60px 0;
+}
+
+.report__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.report__content p {
+  margin: 0 0 20px;
+}
+
+.report__content p:last-child {
+  margin: 0;
+}
+
+.review-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.review-card__image {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 200px;
+  height: 280px;
+  margin: 0 0 20px;
+}
+
+.review-card__image img {
+  width: 200px;
+  height: 280px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.review-card__title {
+  max-width: 320px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+}
+
+.project-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 560px 1fr;
+  grid-template-columns: 560px 1fr;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 120px;
+  -moz-column-gap: 120px;
+  column-gap: 120px;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.project-card.focus-visible:focus .project-card__button {
+  background-color: #0036d1;
+}
+
+.project-card__title {
+  margin: 0 0 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.project-card__button {
+  width: 100%;
+  max-width: 300px;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 313px;
+  border-radius: 8px;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 313px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 @media (min-width: 1199px) {
@@ -3029,6 +3378,19 @@ button,
     column-gap: 20px;
     row-gap: 20px;
   }
+
+  .inner-page__list--single {
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+    row-gap: unset;
+  }
+
+  .project-card {
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -3048,6 +3410,21 @@ button,
 
   .feedback__content {
     max-width: 500px;
+  }
+
+  .passport__info {
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
+
+  .project-card {
+    -ms-grid-columns: 500px 1fr;
+    grid-template-columns: 500px 1fr;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    padding: 20px;
   }
 }
 
@@ -3491,6 +3868,149 @@ button,
     column-gap: 40px;
     row-gap: 40px;
   }
+
+  .inner-page__list--single {
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+    row-gap: unset;
+  }
+
+  .inner-page__list--single .inner-page__item {
+    margin: 0 0 30px;
+  }
+
+  .inner-page__button {
+    margin: 40px 0 0;
+  }
+
+  .description__wrapper {
+    padding: 50px 0;
+  }
+
+  .description__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+  }
+
+  .description__content {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .description__video {
+    margin: 0 0 30px;
+  }
+
+  .equipment {
+    overflow: hidden;
+  }
+
+  .equipment__wrapper {
+    padding: 50px 0;
+  }
+
+  .equipment__description {
+    margin: 0 0 30px;
+  }
+
+  .equipment__slider {
+    overflow: visible;
+  }
+
+  .passport__wrapper {
+    padding: 50px 0;
+  }
+
+  .passport__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+  }
+
+  .passport__content {
+    margin: 0 0 20px;
+  }
+
+  .passport__image {
+    width: 336px;
+    height: 466px;
+  }
+
+  .passport__image::before {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+  }
+
+  .passport__image img {
+    width: 336px;
+    height: 466px;
+    padding: 16px 0 0 16px;
+  }
+
+  .report__wrapper {
+    padding: 50px 0;
+  }
+
+  .project-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .project-card__info {
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    background-color: #f5f5f5;
+  }
+
+  .project-card__title {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .project-card__button {
+    max-width: unset;
+  }
+
+  .project-card__image {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    height: 190px;
+  }
+
+  .project-card__image img {
+    height: 190px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3695,11 +4215,11 @@ button,
   }
 
   .certificates__slide {
-    margin-bottom: 30px;
+    margin-right: 12px;
   }
 
   .certificates__slide:last-child {
-    margin-bottom: 0;
+    margin-right: 0;
   }
 
   .certificates__button {
@@ -3754,12 +4274,132 @@ button,
   }
 
   .inner-page__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 320px;
+    grid-template-columns: 320px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
     row-gap: 30px;
+  }
+
+  .inner-page__list--single {
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+    row-gap: unset;
+  }
+
+  .inner-page__button {
+    max-width: unset;
+  }
+
+  .description__wrapper {
+    padding: 40px 0;
+  }
+
+  .description__content {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .description__video {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+
+  .description__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .equipment__wrapper {
+    padding: 40px 0;
+  }
+
+  .equipment__description {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .passport__wrapper {
+    padding: 40px 0;
+  }
+
+  .passport__content {
+    margin: 0 0 34px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .passport__image {
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 450px;
+  }
+
+  .passport__image::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  .passport__image img {
+    width: 100%;
+    height: 100%;
+    padding: 7px 5px;
+  }
+
+  .report__wrapper {
+    padding: 40px 0;
+  }
+
+  .report__content {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .review-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .review-card__image {
+    width: 86px;
+    height: 120px;
+    margin: 0 12px 0 0;
+  }
+
+  .review-card__image img {
+    width: 86px;
+    height: 120px;
+  }
+
+  .review-card__title {
+    max-width: 222px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .project-card__title {
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .project-card__image {
+    height: 91px;
+  }
+
+  .project-card__image img {
+    height: 91px;
   }
 }
 
@@ -3895,5 +4535,21 @@ button,
 
   .feedback__agreement a:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .description__play-button:hover:not(.focus-visible) svg {
+    color: #0036d1;
+  }
+
+  .description__play-button:active:not(.focus-visible) {
+    color: #001b6b;
+  }
+
+  .project-card:hover:not(.focus-visible) .project-card__button {
+    background-color: #0036d1;
+  }
+
+  .project-card:active:not(.focus-visible) .project-card__button {
+    background-color: #001b6b;
   }
 }

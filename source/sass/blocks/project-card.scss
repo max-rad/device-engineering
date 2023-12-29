@@ -1,0 +1,119 @@
+.project-card {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  justify-content: space-between;
+  column-gap: 120px;
+  padding: 40px;
+
+  border-radius: 12px;
+  background-color: $color-white-smoke;
+
+  transition: color $trans-default;
+
+  @include vp-1439 {
+    column-gap: 60px;
+  }
+
+  @include vp-1279 {
+    grid-template-columns: 500px 1fr;
+    column-gap: 30px;
+    padding: 20px;
+  }
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: unset;
+    padding: 0;
+
+    background-color: $color-default-white;
+  }
+
+  @include hover-focus {
+    .project-card__button {
+      background-color: $color-persian-blue;
+    }
+  }
+
+  @include active {
+    .project-card__button {
+      background-color: $color-sapphire;
+    }
+  }
+
+  &__info {
+    @include vp-1023 {
+      padding: 20px;
+
+      border-radius: 0 0 12px 12px;
+      background-color: $color-white-smoke;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 35px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 20px;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 300px;
+
+    @include vp-1023 {
+      max-width: unset;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 313px;
+
+    border-radius: 8px;
+
+    @include vp-1023 {
+      order: -1;
+
+      height: 190px;
+    }
+
+    @include vp-767 {
+      height: 91px;
+    }
+
+    img {
+      width: 100%;
+      height: 313px;
+
+      border-radius: 8px;
+
+      object-fit: cover;
+
+      @include vp-1023 {
+        height: 190px;
+      }
+
+      @include vp-767 {
+        height: 91px;
+      }
+    }
+  }
+}
