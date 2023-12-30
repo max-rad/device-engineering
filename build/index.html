@@ -56,7 +56,7 @@
                   </li>
                 </ul>
                 <div class="main-nav__contacts"><a class="main-nav__phone" href="tel:+78123093688">+7 (812) 309-36-88</a><a class="main-nav__email" href="mailto:info@d-i.su">info@d-i.su</a></div>
-                <a class="btn main-nav__button" href="#">Оставить заявку
+                <a class="btn main-nav__button" href="#" data-open-modal="feedback">Оставить заявку
                 </a>
               </div>
             </nav>
@@ -69,7 +69,7 @@
             <div class="intro__wrapper">
               <h1 class="intro__title">Device Engineering</h1>
               <p class="intro__description">Профессиональные услуги в&nbsp;сфере энергетической эффективности и&nbsp;технического консалтинга в&nbsp;области инженерно-технического обеспечения</p>
-              <a class="btn btn--big intro__button" href="#">Оставить заявку
+              <a class="btn btn--big intro__button" href="#" data-open-modal="feedback">Оставить заявку
               </a>
               <div class="intro__image"><img src="img/content/intro/intro-image.webp" width="1060" height="582" alt="image">
               </div>
@@ -154,19 +154,19 @@
               <h2 class="title title--h2">Свидетельства и&nbsp;сертификаты</h2>
               <div class="certificates__slider swiper" data-slider="certificates">
                 <div class="certificates__slides swiper-wrapper">
-                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#" data-open-modal="gallery" data-gallery-src="img/content/certificates/certificate-1.webp">
                       <div class="certificate-card__image"><img src="img/content/certificates/certificate-1.webp" width="280" height="400" alt="certificate">
                       </div></a>
                   </div>
-                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#" data-open-modal="gallery" data-gallery-src="img/content/certificates/certificate-2.webp">
                       <div class="certificate-card__image"><img src="img/content/certificates/certificate-2.webp" width="280" height="400" alt="certificate">
                       </div></a>
                   </div>
-                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#" data-open-modal="gallery" data-gallery-src="img/content/certificates/certificate-3.webp">
                       <div class="certificate-card__image"><img src="img/content/certificates/certificate-3.webp" width="280" height="400" alt="certificate">
                       </div></a>
                   </div>
-                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#">
+                  <div class="certificates__slide swiper-slide"><a class="certificate-card" href="#" data-open-modal="gallery" data-gallery-src="img/content/certificates/certificate-4.webp">
                       <div class="certificate-card__image"><img src="img/content/certificates/certificate-4.webp" width="280" height="400" alt="certificate">
                       </div></a>
                   </div>
@@ -217,26 +217,26 @@
                   </div>
                 </div>
                 <h2 class="feedback__title">Хотите узнать больше о&nbsp;наших услугах?</h2>
-                <div class="feedback__form" data-validate-form>
+                <div class="feedback-form" data-validate-form>
                   <form method="get">
-                    <div class="custom-input feedback__input">
+                    <div class="custom-input feedback-form__input">
                       <label>
                         <input type="text" name="name" placeholder="Ваше имя">
                       </label>
                     </div>
-                    <div class="custom-input feedback__input" data-validate-type="phone">
+                    <div class="custom-input feedback-form__input" data-validate-type="phone">
                       <label>
                         <input type="tel" name="name" placeholder="Ваш номер телефона">
                       </label>
                     </div>
-                    <div class="custom-textarea feedback__textarea">
+                    <div class="custom-textarea feedback-form__textarea">
                       <label>
                         <textarea name="name" placeholder="Ваш вопрос"></textarea>
                       </label>
                     </div>
-                    <button class="btn feedback__button" type="submit">Ваш вопрос
+                    <button class="btn feedback-form__button" type="submit">Отправить
                     </button>
-                    <p class="feedback__agreement">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+                    <p class="feedback-form__agreement">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
                   </form>
                 </div>
               </div>
@@ -281,6 +281,57 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--feedback" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-feedback">
+            <h2 class="modal-feedback__title">Оставьте заявку</h2>
+            <p class="modal-feedback__description">Оставьте ваши контакты и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время</p>
+            <div class="feedback-form" data-validate-form>
+              <form method="get">
+                <div class="custom-input feedback-form__input">
+                  <label>
+                    <input type="text" name="name" placeholder="Ваше имя">
+                  </label>
+                </div>
+                <div class="custom-input feedback-form__input" data-validate-type="phone">
+                  <label>
+                    <input type="tel" name="name" placeholder="Ваш номер телефона">
+                  </label>
+                </div>
+                <div class="custom-textarea feedback-form__textarea">
+                  <label>
+                    <textarea name="name" placeholder="Ваш вопрос"></textarea>
+                  </label>
+                </div>
+                <button class="btn feedback-form__button" type="submit">Отправить
+                </button>
+                <p class="feedback-form__agreement">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+              </form>
+            </div>
+          </div>
+          <button class="btn-reset modal__close-button" type="button" arial-label="Закрыть попап" data-close-modal>
+            <svg width="32" height="32" aria-hidden="true">
+              <use xlink:href="/img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--gallery" data-modal="gallery">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-gallery"><img src="" data-gallery-image></div>
+          <button class="btn-reset modal__close-button" type="button" arial-label="Закрыть попап" data-close-modal>
+            <svg width="48" height="48" aria-hidden="true">
+              <use xlink:href="/img/sprite.svg#icon-close-white"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

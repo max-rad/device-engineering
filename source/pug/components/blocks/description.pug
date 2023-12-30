@@ -1,15 +1,21 @@
-mixin description()
+mixin description(data)
   section.description
     .container
       .description__wrapper
-          h2.title.title--h2 Энергоаудит зданий и&nbsp;сооружений
+          if (data.firstTitle)
+            h1.title.title--h1!=data.title
+          else
+            h2.title.title--h2!=data.title
           .description__info
             .description__content
-              p Главный смысл проведения энергетического аудита, конечно, в&nbsp;повышении эффективности их&nbsp;использования, ликвидации нерационального расхода электроэнергии, мест утечки тепла или воды.
-              p В&nbsp;ряде случаев проведение энергетического обследования промышленных предприятий и&nbsp;организаций необходимо согласно требованиям законодательства в&nbsp;сфере энергоэффективности, в&nbsp;других случаях данная процедура добровольна. Организация энергоаудита энергосбережения необходима, когда требуется прохождение сертификации энергоэффективности.
-              p Такой сертификат, как и&nbsp;паспорт энергосбережения обязателен к&nbsp;оформлению
-            .description__video
-              .description__preview
-                +img("content/description", "preview", "webp", "680", "370", "preview")
-                button(type="button").btn-reset.description__play-button
-                  +icon("icon-play", 48, 48)
+              each item in data.description
+                p!=item
+            if (data.video)
+              .description__video
+                .description__preview
+                  +img("content/description", data.video.preview.src, data.video.preview.format, data.video.preview.width, data.video.preview.height, data.video.preview.alt)
+                  button(type="button").btn-reset.description__play-button
+                    +icon("icon-play", 48, 48)
+            if (data.image)
+              .description__image
+                +img("content/description", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

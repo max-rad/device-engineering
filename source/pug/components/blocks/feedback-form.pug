@@ -1,0 +1,20 @@
+mixin feedback-form()
+  .feedback-form(data-validate-form)
+    form(method="get")
+      +custom-input({
+        type: "text",
+        name: "name",
+        placeholder: "Ваше имя"
+      }).feedback-form__input
+      +custom-input({
+        type: "tel",
+        name: "name",
+        placeholder: "Ваш номер телефона"
+      }).feedback-form__input(data-validate-type="phone")
+      +custom-textarea({
+        name: "name",
+        placeholder: "Ваш вопрос"
+      }).feedback-form__textarea
+      +btn({type: "submit", text: "Отправить"}).feedback-form__button
+      p.feedback-form__agreement Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+        a(href="#") политикой обработки персональных данных

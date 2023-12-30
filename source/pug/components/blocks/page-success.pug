@@ -1,0 +1,10 @@
+mixin page-success()
+  section.page-success
+    .container
+      .page-success__wrapper
+        .page-success__image
+          +img("content", "factory", "webp", "658", "350", "factory")
+        .page-success__content
+          h1.page-success__title Спасибо за&nbsp;вашу заявку!
+          p.page-success__description Наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время
+          +btn({href: "#", text: "Вернуться на главную"}).btn--big.page-success__button

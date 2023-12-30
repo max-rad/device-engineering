@@ -1,0 +1,45 @@
+.vacancies {
+  &__wrapper {
+    padding: 60px 0;
+
+    @include vp-1023 {
+      padding: 50px 0;
+    }
+
+    @include vp-767 {
+      padding: 40px 0;
+    }
+  }
+
+  &__description {
+    margin: 0 0 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin: 0 0 40px;
+
+    @include vp-1023 {
+      margin: 0 0 30px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

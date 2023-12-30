@@ -1,0 +1,26 @@
+mixin contacts()
+  section.contacts
+    .container
+      .contacts__wrapper
+        h1.title.title--h1 Наши контакты
+        .contacts__content
+          .contacts__info
+            .contacts__block
+              p.contacts__label Адрес:
+              p.contacts__text OOO &laquo;Дивайс Инжиниринг&raquo;
+              p.contacts__text г. Санкт-Петербург, наб. Обводного канала, д.&nbsp;28, стр.&nbsp;1 Станция метро&nbsp;&mdash; &laquo;Обводный канал&raquo;
+            .contacts__block
+              p.contacts__label Почта:
+              a.contacts__link(href="mailto:info@d-i.su") info@d-i.su
+            .contacts__block
+              p.contacts__label Телефон:
+              a.contacts__link(href="tel:+78123093688") +7&nbsp;812 309-36-88
+            .contacts__block
+              p.contacts__label ИНН 
+              p.contacts__text 7810517696
+            .contacts__block
+              p.contacts__label ОГРН
+              p.contacts__text 1089847215061
+          .contacts__feedback
+            h2.contacts__title Хотите узнать больше о&nbsp;наших услугах?
+            +feedback-form()

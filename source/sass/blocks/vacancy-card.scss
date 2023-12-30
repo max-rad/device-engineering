@@ -1,0 +1,76 @@
+.vacancy-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  border-radius: 10px;
+  background-color: $color-default-white;
+  box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.25);
+
+  transition: color $trans-default;
+
+  @include vp-374 {
+    padding: 20px;
+  }
+
+  @include hover-focus {
+    .vacancy-card__button {
+      background-color: $color-persian-blue;
+    }
+  }
+
+  @include active {
+    .vacancy-card__button {
+      background-color: $color-sapphire;
+    }
+  }
+
+  &__date {
+    margin: 0 0 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+
+    color: $color-default-black;
+  }
+
+  &__salary {
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+  }
+
+  &__description {
+    margin: 0 0 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 300px;
+
+    @include vp-1023 {
+      max-width: unset;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+mixin completed-projects()
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "320",
+          height: "300",
+          alt: "image"
+        },
+        title: "Газпромнефть&nbsp;&mdash; Московский НПЗ"
+      },
+      {
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "320",
+          height: "300",
+          alt: "image"
+        },
+        title: "Газпром нефть шельф МЛСП Приразломная"
+      },
+      {
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "320",
+          height: "300",
+          alt: "image"
+        },
+        title: "Сакмарская ТЭЦ"
+      }
+    ]
+
+  section.completed-projects
+    .container
+      .completed-projects__wrapper
+        h2.title.title--h2 Реализованные проекты
+        p.completed-projects__description Внедрение комплексного технико-финансового математического моделирования технологических и&nbsp;энергетических систем
+        .completed-projects__slider.swiper(data-slider="completed-projects")
+          .completed-projects__slides.swiper-wrapper
+            each item in list
+              .completed-projects__slide.swiper-slide
+                .completed-projects__image
+                  +img("content/completed-projects", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                h3.completed-projects__title!=item.title
+        +btn({href: "#", text: "Смотреть все"}).btn--border.completed-projects__button

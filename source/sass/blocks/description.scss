@@ -47,7 +47,8 @@
   &__video {
     position: relative;
     width: 100%;
-    height: 370px;
+    height: 0;
+    padding-bottom: 54.35%;
     overflow: hidden;
 
     border-radius: 8px;
@@ -56,24 +57,15 @@
       margin: 0 0 30px;
     }
 
-    @include vp-767 {
-      height: 0;
-      padding-bottom: 56.25%;
-    }
-
     iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+
       width: 100%;
       height: 100%;
 
       border-radius: 8px;
-
-      @include vp-767 {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-      }
     }
 
     video {
@@ -137,6 +129,33 @@
 
     @include active {
       color: $color-sapphire;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    max-height: 370px;
+
+    border-radius: 8px;
+
+    @include vp-1023 {
+      max-height: unset;
+      margin: 0 0 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 370px;
+
+      border-radius: 8px;
+
+      object-fit: contain;
+
+      @include vp-1023 {
+        max-height: unset;
+      }
     }
   }
 }

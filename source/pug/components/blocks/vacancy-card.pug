@@ -1,0 +1,7 @@
+mixin vacancy-card(data)
+  a.vacancy-card(href=data.href)
+    p.vacancy-card__date!=data.date
+    h3.vacancy-card__title!=data.title
+    p.vacancy-card__salary!=data.salary
+    p.vacancy-card__description!=data.description
+    +btn({type: "button", text: "Подробнее"}).vacancy-card__button

@@ -1,0 +1,21 @@
+.modal-feedback {
+  &__title {
+    margin: 0 0 20px;
+
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 42px;
+
+    color: $color-default-black;
+  }
+
+  &__description {
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: $color-default-black;
+  }
+}

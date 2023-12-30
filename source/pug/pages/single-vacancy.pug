@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Device Engineering | Инженер-теплоэнергетик"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "single-vacancy.html"
+
+block main
+    main
+      +single-vacancy()
+      +feedback()
+
+block modals
