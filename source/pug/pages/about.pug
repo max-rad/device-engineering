@@ -12,6 +12,13 @@ block variables
 block main
     main
       +description({
+        background: {
+          src: "background-1",
+          format: "png",
+          width: "237",
+          height: "735",
+          alt: "background"
+        },
         firstTitle: "true",
         title: "О&nbsp;компании",
         description: [
@@ -33,6 +40,13 @@ block main
         }
       })
       +modeling({
+        background: {
+          src: "background-2",
+          format: "png",
+          width: "340",
+          height: "733",
+          alt: "background"
+        },
         title: "Моделирование и&nbsp;цифровизация объектов энергетической инфраструктуры",
         content: [
           "Применение математического моделирования энергетической инфраструктуры обеспечит возможность проработки всех возможных эксплуатационных режимов её&nbsp;работы и&nbsp;вариантов модернизации для решения следующих задач:"
@@ -44,7 +58,22 @@ block main
           "качественное повышение надёжности энергосистем"
         ]
       })
-      +completed-projects()
+      +completed-projects({
+        backgroundLeft: {
+          src: "background-1",
+          format: "png",
+          width: "237",
+          height: "735",
+          alt: "background"
+        },
+        backgroundRight: {
+          src: "background-3",
+          format: "png",
+          width: "236",
+          height: "733",
+          alt: "background"
+        }
+      })
       +feedback()
 
 block modals

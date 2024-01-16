@@ -1,0 +1,54 @@
+.loader {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  &__dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+
+    border-radius: 50%;
+    background-color: $color-default-white;
+
+    opacity: 0.2;
+    animation-duration: 750ms;
+    animation-name: loader;
+    animation-iteration-count: infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0ms;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 180ms;
+    }
+
+    &:nth-child(3) {
+      margin-right: 0;
+
+      animation-delay: 360ms;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}

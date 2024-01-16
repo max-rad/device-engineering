@@ -64,10 +64,10 @@ mixin header(headerMods, currentUrl)
           .main-nav__menu
             ul.main-nav__list(data-header-accordion)
               each item in headerLinks
-                li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown} data-header-accordion-item=(!!item.dropdown))
-                  a.main-nav__link(href=item.href data-header-accordion-link=(!!item.dropdown))!=item.text
-                    if (item.dropdown)
-                      +icon("icon-arrow-chevron", 16, 16)
+                li.main-nav__item(class={"menu-item-has-children" : item.dropdown})
+                  a.main-nav__link(href=item.href)!=item.text
+                    //- if (item.dropdown)
+                    //-   +icon("icon-arrow-chevron", 16, 16)
                   if (item.dropdown)
                     ul.main-nav__sublist
                       each subitem in item.dropdown

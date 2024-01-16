@@ -1,4 +1,30 @@
 .description {
+  position: relative;
+
+  &__background {
+    z-index: -1;
+    position: absolute;
+
+    top: 218px;
+    left: 0;
+
+    width: 237px;
+    height: 735px;
+
+    @include vp-1023 {
+      top: -40px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    img {
+      width: 237px;
+      height: 735px;
+    }
+  }
+
   &__wrapper {
     padding: 60px 0;
 
@@ -77,6 +103,7 @@
   }
 
   &__preview {
+    z-index: 3;
     position: absolute;
 
     top: 0;
@@ -86,6 +113,9 @@
 
     border-radius: 8px;
 
+    cursor: pointer;
+    user-select: none;
+
     img {
       width: 100%;
       height: 100%;
@@ -93,6 +123,22 @@
       object-fit: cover;
 
       border-radius: 8px;
+    }
+
+    @include hover-focus {
+      .description__play-button {
+        svg {
+          color: $color-persian-blue;
+        }
+      }
+    }
+
+    @include active {
+      .description__play-button {
+        svg {
+          color: $color-sapphire;
+        }
+      }
     }
   }
 
@@ -128,7 +174,9 @@
     }
 
     @include active {
-      color: $color-sapphire;
+      svg {
+        color: $color-sapphire;
+      }
     }
   }
 

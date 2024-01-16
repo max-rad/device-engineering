@@ -137,9 +137,15 @@
 
   &--gallery {
     .modal__content {
-      position: static;
+      width: 540px;
+      height: 100%;
+      padding: 0;
 
       background-color: $color-transparent;
+
+      @include vp-767 {
+        padding: 0;
+      }
     }
 
     .modal__close-button {

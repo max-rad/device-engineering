@@ -74,6 +74,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      overflow: auto;
 
       top: 99px;
       right: 0;
@@ -135,35 +136,28 @@
       margin-bottom: 20px;
     }
 
-    &.is-active {
+    &.menu-item-has-children {
       .main-nav__link {
-        @include vp-1199 {
-          color: $color-smalt;
-        }
+        &::after {
+          content: "";
+          width: 16px;
+          height: 16px;
+          margin-left: 3px;
 
-        svg {
-          @include vp-1199 {
-            color: $color-smalt;
+          background-image: url("../img/sprite/icon-arrow-chevron.svg");
+          background-position: 0 0;
+          background-repeat: no-repeat;
 
-            transform: rotate(180deg);
-          }
-        }
-      }
-
-      .main-nav__sublist {
-        @include vp-1199 {
-          display: block;
+          transition: transform $trans-default;
         }
       }
-    }
 
-    &--dropdown {
       @media (min-width: 1199px) {
         @include focus-within {
           .main-nav__link {
             color: $color-smalt;
 
-            svg {
+            &::after {
               color: $color-smalt;
 
               transform: rotate(180deg);
@@ -180,7 +174,7 @@
           .main-nav__link {
             color: $color-smalt;
 
-            svg {
+            &::after {
               color: $color-smalt;
 
               transform: rotate(180deg);
@@ -191,6 +185,28 @@
             opacity: 1;
             visibility: visible;
           }
+        }
+      }
+    }
+
+    &.menu-item-has-children.is-active {
+      .main-nav__link {
+        @include vp-1199 {
+          color: $color-smalt;
+        }
+
+        &::after {
+          @include vp-1199 {
+            color: $color-smalt;
+
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .main-nav__sublist {
+        @include vp-1199 {
+          display: block;
         }
       }
     }
@@ -227,28 +243,10 @@
       line-height: 20px;
     }
 
-    svg {
-      flex-shrink: 0;
-
-      width: 16x;
-      height: 16px;
-      margin-left: 3px;
-
-      color: $color-nero;
-
-      transition: color $trans-default, transform $trans-default;
-
-      @include vp-1199 {
-        font-size: 18px;
-        line-height: 18px;
-        margin-left: 8px;
-      }
-    }
-
     @include hover-focus {
       color: $color-persian-blue;
 
-      svg {
+      &::after {
         color: $color-persian-blue;
       }
     }
@@ -256,7 +254,7 @@
     @include active {
       color: $color-sapphire;
 
-      svg {
+      &::after {
         color: $color-persian-blue;
       }
     }

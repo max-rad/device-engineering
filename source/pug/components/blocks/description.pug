@@ -1,5 +1,8 @@
 mixin description(data)
   section.description
+    if (data.background)
+      .description__background
+        +img("content", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
     .container
       .description__wrapper
           if (data.firstTitle)
@@ -11,11 +14,16 @@ mixin description(data)
               each item in data.description
                 p!=item
             if (data.video)
-              .description__video
-                .description__preview
+              .description__video(data-video="Q2KQipx8TgY")
+                .description__preview(data-video-preview)
                   +img("content/description", data.video.preview.src, data.video.preview.format, data.video.preview.width, data.video.preview.height, data.video.preview.alt)
-                  button(type="button").btn-reset.description__play-button
+                  button(type="button" data-video-play).btn-reset.description__play-button
                     +icon("icon-play", 48, 48)
+                .loader(data-video-loader)
+                  span.loader__dot
+                  span.loader__dot
+                  span.loader__dot
+                .intro__iframe(data-video-iframe)
             if (data.image)
               .description__image
                 +img("content/description", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

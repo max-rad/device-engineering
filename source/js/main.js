@@ -9,6 +9,7 @@ import {initEquipmentSlider} from './modules/sliders/init-equipment-slider';
 import {initCompletedProjectsSlider} from './modules/sliders/init-completed-projects-slider';
 import {initModals} from './modules/modal/init-modals';
 import {initGallery} from './modules/init-gallery';
+import {initVideoLoader} from './modules/video-loader/init-video-loader';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -24,5 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhoneMask();
     initPhoneValidation();
     initGallery();
+    initVideoLoader();
   });
 });

@@ -1,4 +1,31 @@
 .modeling {
+  position: relative;
+
+  &__background {
+    z-index: -1;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 340px;
+    height: 733px;
+
+    @include vp-1023 {
+      top: -284px;
+      right: -122px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    img {
+      width: 340px;
+      height: 733px;
+    }
+  }
+
   &__wrapper {
     padding: 60px 0;
 

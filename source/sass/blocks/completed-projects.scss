@@ -1,4 +1,49 @@
 .completed-projects {
+  position: relative;
+
+  &__background {
+    z-index: -1;
+    position: absolute;
+
+    &--left {
+      top: 136px;
+      left: 0;
+
+      width: 237px;
+      height: 735px;
+
+      @include vp-1023 {
+        top: -122px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+
+      img {
+        width: 237px;
+        height: 735px;
+      }
+    }
+
+    &--right {
+      top: 389px;
+      right: 0;
+
+      width: 236px;
+      height: 733px;
+
+      @include vp-1023 {
+        display: none;
+      }
+
+      img {
+        width: 236px;
+        height: 733px;
+      }
+    }
+  }
+
   @include vp-1023 {
     overflow: hidden;
   }
@@ -69,7 +114,7 @@
 
       border-radius: 8px;
 
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 

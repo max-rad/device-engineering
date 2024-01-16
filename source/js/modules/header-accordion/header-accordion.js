@@ -3,7 +3,7 @@ export class HeaderAccordion {
     this._menu = document.querySelector('[data-header-accordion]');
     this._breakpointMedia = window.matchMedia('(max-width: 1199px)');
 
-    this._itemClickHandler = this._itemClickHandler.bind(this);
+    this._linkClickHandler = this._linkClickHandler.bind(this);
     this._breakpointChecker = this._breakpointChecker.bind(this);
   }
 
@@ -16,9 +16,9 @@ export class HeaderAccordion {
     this._breakpointChecker();
   }
 
-  _itemClickHandler(evt) {
+  _linkClickHandler(evt) {
     evt.preventDefault();
-    const item = evt.target.closest('[data-header-accordion-item]');
+    const item = evt.target.closest('.menu-item-has-children');
 
     if (item.classList.contains('is-active')) {
       item.classList.remove('is-active');
@@ -28,7 +28,7 @@ export class HeaderAccordion {
   }
 
   _breakpointChecker() {
-    const menuItems = document.querySelectorAll('[data-header-accordion-item]');
+    const menuItems = document.querySelectorAll('.menu-item-has-children');
 
     if (!menuItems.length) {
       return;
@@ -36,12 +36,13 @@ export class HeaderAccordion {
 
     if (this._breakpointMedia.matches) {
       menuItems.forEach((item) => {
-        const link = item.querySelector('[data-header-accordion-link]');
-        link.addEventListener('click', this._itemClickHandler);
+        const link = item.querySelector('.main-nav__link');
+        link.addEventListener('click', this._linkClickHandler);
       });
     } else {
       menuItems.forEach((item) => {
-        item.removeEventListener('click', this._itemClickHandler);
+        const link = item.querySelector('.main-nav__link');
+        link.removeEventListener('click', this._linkClickHandler);
 
         if (item.classList.contains('is-active')) {
           item.classList.remove('is-active');
