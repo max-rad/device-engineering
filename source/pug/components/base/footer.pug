@@ -50,5 +50,7 @@ mixin footer(footerMods)
             each item in footerLinks
               li.footer__item
                 a.footer__link(href=item.href)!=item.text
-        a.footer__policy(href="#") Политика персональных данных
+        .footer__policies
+          a.footer__policy(href="#") Политика персональных данных
+          p.footer__recaptcha Этот сайт защищен от&nbsp;спама сервисом reCAPTCHA от&nbsp;компании Google. <a href="https://policies.google.com/privacy">Privacy Policy</a>/<a href="https://policies.google.com/terms">Terms of&nbsp;Service</a>
 

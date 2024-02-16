@@ -1364,6 +1364,10 @@ button,
   list-style: none;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .scroll-lock-ios {
   position: fixed;
   overflow: hidden;
@@ -1756,9 +1760,13 @@ button,
 
 .footer__text {
   margin: 0;
-  font-weight: 275;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  color: #ffffff;
+}
+
+.footer__text a {
   color: #ffffff;
 }
 
@@ -1784,7 +1792,7 @@ button,
 .footer__description {
   max-width: 300px;
   margin: 0;
-  font-weight: 275;
+  font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
@@ -1792,7 +1800,7 @@ button,
 
 .footer__email {
   margin: 0 0 25px;
-  font-weight: 275;
+  font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
@@ -1812,7 +1820,7 @@ button,
 
 .footer__phone {
   margin: 0;
-  font-weight: 275;
+  font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
@@ -1851,7 +1859,7 @@ button,
 }
 
 .footer__link {
-  font-weight: 275;
+  font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
@@ -1864,10 +1872,15 @@ button,
   color: #0036d1;
 }
 
-.footer__policy {
+.footer__policies {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
+}
+
+.footer__policy {
+  display: block;
+  margin: 0 0 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -1878,6 +1891,25 @@ button,
 }
 
 .footer__policy.focus-visible:focus {
+  color: #0036d1;
+}
+
+.footer__recaptcha {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #808080;
+}
+
+.footer__recaptcha a {
+  color: #808080;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.footer__recaptcha a.focus-visible:focus {
   color: #0036d1;
 }
 
@@ -4527,11 +4559,19 @@ button,
     line-height: 20px;
   }
 
-  .footer__policy {
+  .footer__policies {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
     margin: 0 0 40px;
+  }
+
+  .footer__policy {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .footer__recaptcha {
     font-size: 20px;
     line-height: 30px;
   }
@@ -5074,7 +5114,7 @@ button,
     margin: 0 0 30px;
   }
 
-  .footer__policy {
+  .footer__policies {
     margin: 0 0 50px;
   }
 
@@ -5653,6 +5693,14 @@ button,
   }
 
   .footer__policy:active:not(.focus-visible) {
+    color: #001b6b;
+  }
+
+  .footer__recaptcha a:hover:not(.focus-visible) {
+    color: #0036d1;
+  }
+
+  .footer__recaptcha a:active:not(.focus-visible) {
     color: #001b6b;
   }
 

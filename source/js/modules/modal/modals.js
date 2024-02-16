@@ -216,6 +216,12 @@ export class Modals {
       }, this._eventTimeout);
     }
 
+    const image = document.querySelector('[data-gallery-image]');
+
+    if (image) {
+      image.src = '';
+    }
+
     setTimeout(() => {
       document.addEventListener('click', this._documentClickHandler);
     }, this._eventTimeout);
