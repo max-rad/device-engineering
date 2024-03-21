@@ -8,15 +8,15 @@ import {initPhoneValidation} from './modules/init-phone-validation';
 import {initEquipmentSlider} from './modules/sliders/init-equipment-slider';
 import {initCompletedProjectsSlider} from './modules/sliders/init-completed-projects-slider';
 import {initModals} from './modules/modal/init-modals';
-import {initGallery} from './modules/init-gallery';
 import {initVideoLoader} from './modules/video-loader/init-video-loader';
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  initHeader();
+  initHeaderAccordion();
+  initModals();
+
   window.addEventListener('load', () => {
-    initHeader();
-    initHeaderAccordion();
-    initModals();
     initCustomSelect();
     initAccordion();
     initCertificatesSlider();
@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initCompletedProjectsSlider();
     initPhoneMask();
     initPhoneValidation();
-    initGallery();
     initVideoLoader();
   });
 });

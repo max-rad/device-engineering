@@ -1,4 +1,4 @@
 mixin certificate-card(data)
-  a.certificate-card(href="#" data-open-modal="gallery" data-gallery-src="img/content/certificates/" + data.image.src + "." + data.image.format)
+  a.certificate-card(href="img/content/certificates/" + data.image.src + "." + data.image.format data-fancybox="certificates")
     .certificate-card__image
       +img("content/certificates", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
